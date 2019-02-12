@@ -1,0 +1,3 @@
+[submodule "libtm_ros"]
+	path = libtm_ros
+	url = https://github.com/IntelRealSense/libtm_ros
