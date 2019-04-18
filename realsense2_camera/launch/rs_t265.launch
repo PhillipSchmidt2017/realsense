@@ -28,6 +28,8 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
   <arg name="initial_reset"         default="false"/>
   <arg name="unite_imu_method"      default=""/>
   
+  <arg name="calib_odom_file"       default="$(find realsense2_camera)/config/calibration_odometry.json"/>
+
   <group ns="$(arg camera)">
     <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
       <arg name="tf_prefix"                value="$(arg tf_prefix)"/>
@@ -50,6 +52,8 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
       <arg name="linear_accel_cov"         value="$(arg linear_accel_cov)"/>
       <arg name="initial_reset"            value="$(arg initial_reset)"/>
       <arg name="unite_imu_method"         value="$(arg unite_imu_method)"/>
+
+      <arg name="calib_odom_file"          value="$(arg calib_odom_file)"/>
     </include>
   </group>
 </launch>
