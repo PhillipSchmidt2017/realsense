@@ -1,0 +1,4 @@
+<launch>
+  <node name="image_saver_fe1" pkg="image_view" type="image_saver" args="image:=camera/fisheye1/image_raw _filename_format:=$(env HOME)/fe1_%04d.png"/>
+  <node name="image_saver_fe2" pkg="image_view" type="image_saver" args="image:=camera/fisheye2/image_raw _filename_format:=$(env HOME)/fe2_%04d.png"/>
+</launch>

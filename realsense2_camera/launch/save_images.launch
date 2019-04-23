@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="rosservice" type="rosservice" name="click1" args="call --wait /image_saver_fe1/save"/>
+  <node pkg="rosservice" type="rosservice" name="click2" args="call --wait /image_saver_fe2/save"/>
+</launch>
