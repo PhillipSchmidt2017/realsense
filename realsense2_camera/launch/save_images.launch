@@ -1,4 +1,8 @@
 <launch>
   <node pkg="rosservice" type="rosservice" name="click1" args="call --wait /image_saver_fe1/save"/>
   <node pkg="rosservice" type="rosservice" name="click2" args="call --wait /image_saver_fe2/save"/>
+
+  <node pkg="rosservice" type="rosservice" name="click3" args="call --wait /image_saver_color/save"/>
+  <node pkg="rosservice" type="rosservice" name="click4" args="call --wait /image_saver_ir1/save"/>
+  <node pkg="rosservice" type="rosservice" name="click5" args="call --wait /image_saver_ir2/save"/>
 </launch>

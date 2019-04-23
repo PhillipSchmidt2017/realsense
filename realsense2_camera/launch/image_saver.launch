@@ -1,7 +1,15 @@
 <launch>
-  <node name="image_view_fe1" pkg="image_view" type="image_view" args="image:=camera/fisheye1/image_raw"/>
-  <node name="image_view_fe2" pkg="image_view" type="image_view" args="image:=camera/fisheye2/image_raw"/>
+  <node name="image_view_fe1" pkg="image_view" type="image_view" args="image:=/camera/fisheye1/image_raw"/>
+  <node name="image_view_fe2" pkg="image_view" type="image_view" args="image:=/camera/fisheye2/image_raw"/>
 
-  <node name="image_saver_fe1" pkg="image_view" type="image_saver" args="image:=camera/fisheye1/image_raw _filename_format:=$(env HOME)/fe1_%04d.png"/>
-  <node name="image_saver_fe2" pkg="image_view" type="image_saver" args="image:=camera/fisheye2/image_raw _filename_format:=$(env HOME)/fe2_%04d.png"/>
+  <node name="image_view_color" pkg="image_view" type="image_view" args="image:=/camera/color/image_raw"/>
+  <node name="image_view_ir1" pkg="image_view" type="image_view" args="image:=/camera/infra1/image_rect_raw"/>
+  <node name="image_view_ir2" pkg="image_view" type="image_view" args="image:=/camera/infra2/image_rect_raw"/>
+
+  <node name="image_saver_fe1" pkg="image_view" type="image_saver" args="image:=/camera/fisheye1/image_raw _filename_format:=$(env HOME)/fe1_%04d.png _save_all_image:=false"/>
+  <node name="image_saver_fe2" pkg="image_view" type="image_saver" args="image:=/camera/fisheye2/image_raw _filename_format:=$(env HOME)/fe2_%04d.png _save_all_image:=false"/>
+
+  <node name="image_saver_color" pkg="image_view" type="image_saver" args="image:=/camera/color/image_raw _filename_format:=$(env HOME)/color_%04d.png _save_all_image:=false"/>
+  <node name="image_saver_ir1" pkg="image_view" type="image_saver" args="image:=/camera/infra1/image_rect_raw _filename_format:=$(env HOME)/ir1_%04d.png _save_all_image:=false"/>
+  <node name="image_saver_ir2" pkg="image_view" type="image_saver" args="image:=/camera/infra2/image_rect_raw _filename_format:=$(env HOME)/ir2_%04d.png _save_all_image:=false"/>
 </launch>
